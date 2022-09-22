@@ -1,11 +1,11 @@
 class Solution {
     public int addDigits(int num) {
         while (num >= 10) {
-            int temp = num;
+            int a = num;
             num = 0;
-            while (temp > 0) {
-                num = num + (temp % 10);
-                temp = temp / 10;
+            while (a > 0) {
+                num = num + (a % 10);
+                a = a / 10;
             }
         }
         return num;

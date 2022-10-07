@@ -14,6 +14,5 @@ class Solution {
         if(flag==0)
             return false;
         return true;
-        
     }
 }

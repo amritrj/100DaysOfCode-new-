@@ -15,7 +15,6 @@ class Solution {
         for(int i=0;i<list.size();i++){
             ar1[i]=list.get(i);
         }
-        return ar1;
-        
+        return ar1; 
     }
 }

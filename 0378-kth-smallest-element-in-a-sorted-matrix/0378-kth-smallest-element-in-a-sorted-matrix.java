@@ -8,22 +8,17 @@ class Solution {
             mid = low + (high-low)/2;
             temp = n - 1;
 			count = 0;
-			for(int i = 0; i < n; i++){
-
-							while(temp >= 0 && matrix[i][temp] > mid){
-								temp--;
-							}
-							count+= (temp+1);
-						}
-
-						if(count < k){
-							low = mid + 1;
-						}else{
-							high = mid;
-						}
-					}
-					return low;
-
-        
+            for(int i = 0; i < n; i++){
+                while(temp >= 0 && matrix[i][temp] > mid){
+                    temp--;
+                }
+                count+= (temp+1);
+            }
+            if(count < k){
+                low = mid + 1;
+            }
+            else{high = mid;}
+        }
+        return low;
     }
 }

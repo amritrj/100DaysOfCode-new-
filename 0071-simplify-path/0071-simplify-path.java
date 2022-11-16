@@ -8,9 +8,8 @@ class Solution {
          if(!p[i].equals("") && !p[i].equals(".") && !p[i].equals("..")){
            s.push(p[i]);
          }
-       }
-       
-       if(s.isEmpty()) return "/";
+        }
+        if(s.isEmpty()) return "/";
        while(!s.isEmpty()){
          res.insert(0,s.pop()).insert(0,"/");
        }

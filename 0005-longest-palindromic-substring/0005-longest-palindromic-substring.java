@@ -1,9 +1,9 @@
 class Solution {
     public String longestPalindrome(String s) {
+        int x=s.length();
         int start=0;
         int end=0;
         int low,high;
-        int x=s.length();
         for(int i=0;i<x;i++)
         {
             low=i;

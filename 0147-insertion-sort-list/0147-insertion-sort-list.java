@@ -11,18 +11,15 @@ class Solution {
                 curr = curr.next;
                 continue;
             }
-            
             ListNode tmp = fk;
             while (curr.val > tmp.next.val) {
                 tmp = tmp.next;
             }
-            
             prev.next = curr.next;
             curr.next = tmp.next;
             tmp.next = curr;
             curr = prev.next;
         }
-        return fk.next;
-        
+        return fk.next;   
     }
 }

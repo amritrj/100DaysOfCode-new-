@@ -1,10 +1,8 @@
-
 class Solution {
     public ListNode insertionSortList(ListNode head) {
         ListNode fk = new ListNode(0, head);
         ListNode prev = head;
         ListNode curr = head.next;
-        
         while (curr != null) {
             if (curr.val >= prev.val) {
                 prev = curr;

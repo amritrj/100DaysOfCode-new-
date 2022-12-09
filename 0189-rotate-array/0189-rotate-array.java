@@ -13,7 +13,6 @@ class Solution {
             start++;
             end--;
         }
-        
-       
+             
     }
 }

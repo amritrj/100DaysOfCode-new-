@@ -1,7 +1,6 @@
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> res = new ArrayList<Integer>();
-        
         if (matrix.length == 0) {
             return res;
         }
@@ -10,7 +9,6 @@ class Solution {
         int rowEnd = matrix.length-1;
         int colBegin = 0;
         int colEnd = matrix[0].length - 1;
-        
         while (rowBegin <= rowEnd && colBegin <= colEnd) {
             for (int j = colBegin; j <= colEnd; j ++) {
                 res.add(matrix[rowBegin][j]);

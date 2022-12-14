@@ -5,11 +5,10 @@ class Solution {
             if(matrix[r][c] == target)
                 return true;
             else if(matrix[r][c] > target)
-                c --;
-        else if(matrix[r][c] < target)
-          r++;
-      }
-      return false;
-        
+                c--;
+            else if(matrix[r][c] < target)
+                r++;
+        }
+        return false;
     }
 }

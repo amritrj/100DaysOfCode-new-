@@ -16,7 +16,7 @@ class Solution {
         }
         if ((dividend >= 0) == (divisor >= 0)) {
         return quo;
-    } 
+        } 
         else {
             return -1 * quo;
       }

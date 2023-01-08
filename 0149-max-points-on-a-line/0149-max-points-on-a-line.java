@@ -1,7 +1,7 @@
 class Solution {
     public int maxPoints(int[][] points) {
         int n = points.length;
-        if(n <= 2) return n;
+        if(n <= 1) return n;
         int ans = 2;
         for(int i = 0 ;i < n; i++){
             for(int j = i+1; j < n ; j++){

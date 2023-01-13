@@ -2,7 +2,7 @@ class Solution {
     int longestPathValue = 1; 
     public int longestPath(int[] parent, String s) {
         Map<Integer, List<Integer>> adj = new HashMap<>();
-        for(int i = 0; i < parent.length; i++){
+        for(int i = 1; i < parent.length; i++){
             int j = parent[i];
             adj.putIfAbsent(j, new LinkedList<>());
             adj.get(j).add(i);

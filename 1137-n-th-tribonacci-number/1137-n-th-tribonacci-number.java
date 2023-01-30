@@ -5,7 +5,7 @@ class Solution
         if(n < 3)   return n == 0 ? 0 : 1;
         
         int[] res = new int[n+1];
-        res[1] = 0;
+        res[0] = 0;
         res[1] = 1;
         res[2] = 1;        
         for(int i = 3; i <= n; i++)

@@ -5,9 +5,9 @@ class Solution {
             if (i > curr) {
                 ans++;
                 curr = next;
-            }
+            };
             next = Math.max(next, N[i] + i);
-        }
+        };
         return ans;
-    }
-}
+    };
+};

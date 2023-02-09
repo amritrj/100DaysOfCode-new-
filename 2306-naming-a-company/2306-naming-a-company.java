@@ -1,7 +1,6 @@
 class Solution {
   public long distinctNames(String[] ideas) {
     long ans = 0;
-    // Group strings by initials
     Set<String>[] suffixes = new Set[26];
 
     for (int i = 0; i < 26; ++i)

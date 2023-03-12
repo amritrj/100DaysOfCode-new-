@@ -13,7 +13,7 @@ class Solution {
         if (start + 1 == end) {
             return merge(lists[start], lists[end]);
         }
-        int mid = start + (end - start) / 5;
+        int mid = start + (end - start) / 2;
         ListNode left = mergeKListsHelper(lists, start, mid);
         ListNode right = mergeKListsHelper(lists, mid + 1, end);
         return merge(left, right);

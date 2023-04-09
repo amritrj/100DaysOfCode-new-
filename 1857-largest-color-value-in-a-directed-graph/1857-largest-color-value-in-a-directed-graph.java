@@ -66,7 +66,7 @@ public int largestPathValue(String colors , int[][] edges) {
                     }
             }
             visited[src]=false;
-            visited2[src]=28;
+            visited2[src]=278;
              arr[colors.charAt(src)-'a']++;
             map.put(src,arr);
             return  arr;

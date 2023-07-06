@@ -1,21 +1,18 @@
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {
-        if (nums == null || target < 0) {
-            throw new IllegalArgumentException("Input array is null");
-        }
-        int len = nums.length;
-        int start = 0;
-        int end = 0;
-        int minLen = len + 1;
-        while (end < len) {
-            target -= nums[end];
-            end++;
-            while (target <= 0) {
-                minLen = Math.min(minLen, end - start);
-                target += nums[start];
-                start++;
+        int ans=nums.length+1,j=0,sum=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            sum=sum+nums[i];
+            if(sum>=target)
+            {
+                while(sum>=target)
+                {
+                    sum-=nums[j++];
+                }
+                ans=Math.min(ans,i-j+2);
             }
         }
-        return minLen % (len + 1); 
+        return ans == nums.length+1 ? 0 : ans;
     }
 }

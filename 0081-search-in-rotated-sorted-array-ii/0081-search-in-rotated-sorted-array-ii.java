@@ -1,28 +1,17 @@
+//referenced
 class Solution {
-    public boolean search(int[] nums, int target) {
-        int strt = 0, a = nums.length - 1;
-        while(strt <= a) {
-          int mid = strt + (a - strt) / 2;
-          if(nums[mid] == target)
-              return true;
-          if(nums[strt] == nums[mid] && nums[mid] == nums[a]) {
-                strt ++;
-                a --;
+    public boolean search(int[] ar, int t) {
+        int i=0, n=ar.length, j=n-1, m;
+        while(i<=j){
+            m=(i+j)/2;
+            if(ar[m]==t || ar[i]==t || ar[j]==t) return true;
+            if(ar[i]==ar[j]){
+                i++; j--;
+                continue;
             }
-          else if(nums[strt] <= nums[mid]) {
-              if(target >= nums[strt] && target <= nums[mid])
-              a = mid - 1;
-
-              else
-              strt = mid + 1;
-          }
-          else {
-              if(target <= nums[a] && target >= nums[mid])
-              strt = mid + 1;
-              else
-              a = mid - 1; 
-          }
-      }
-      return false;
+            if((ar[i]<=ar[m] && (ar[i]>t || ar[m]<t)) || (ar[i]>t && ar[m]<t)) i=m+1;
+            else j=m-1;
+        }
+        return false;
     }
 }
